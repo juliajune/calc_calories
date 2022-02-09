@@ -1,0 +1,27 @@
+//input field
+.inputtxt
+	background-color: $inp-color-secondary
+	padding: $inp-padding
+	display: inline-block
+	border: $inp-border solid $inp-color-main-light
+	border-radius: $inp-border-radius
+	font-family: $inp-text
+	font-size: $inp-font-size
+	+hover-effect
+	color: $inp-color-main
+
+	&:focus
+		outline: none
+		border: $inp-border solid $inp-color-main
+		+hover-effect
+
+	&::placeholder
+		color: $placeholder-color
+		opacity: 1
+		+hover-effect
+		font-family: 'Oswald', sans-serif
+		font-size: $placeholder-font-size
+
+	&:focus::placeholder
+		opacity: 0
+		+hover-effect

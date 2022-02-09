@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="box">
+		<h2 class="box__header">Калькулятор рассчета каллорий</h2>
+		<form action="" class="box__form form-calculator" id="calculator">
+			<!--User gender -->
+			<fieldset class="form-calculator__elemets-group elemets-group">
+				<legend class="elemets-group__title">Ваш пол</legend>
+				<p class="elemets-group__item radio">
+					<input type="radio" name="gender" value="woman" id="gender-1" class="radio__input" checked>
+					<label for="gender-1" class="radio__label">Женщина</label>
+				</p> <!--/.elemets-group__item  -->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="gender" value="man" id="gender-2" class="radio__input" >
+					<label for="gender-2" class="radio__label">Мужчина</label>
+				</p> <!--/.elemets-group__item  -->
+			</fieldset><!--/.elemets-group -->
+			<!--/User gender -->
+			
+			<!--User data -->
+			<fieldset class="form-calculator__elemets-group elemets-group">
+				<legend class="elemets-group__title">Ваши данные</legend>
+				<p class="elemets-group__item text-field">
+					<label for="user-age" class="text-field__label">Введите возраст, лет</label>
+					<input type="text" name="age" id="user-age" class="text-field__inputtxt inputtxt" data-min="1" data-max="100" placeholder="Введите возраст">
+				</p> <!--/.elemets-group__item .element-item -->
+				<p class="elemets-group__item text-field">
+					<label for="user-height" class="text-field__label">Ваш рост, см</label>
+					<input type="text" name="height" id="user-height" class="text-field__inputtxt inputtxt" data-min="40" data-max="250" placeholder="Введите рост">
+				</p> <!--/.elemets-group__item .element-item -->
+				<p class="elemets-group__item text-field">
+					<label for="user-weight" class="text-field__label">Ваш вес, кг</label>
+					<input type="text" name="weight" id="user-weight" class="text-field__inputtxt inputtxt" data-min="3" data-max="300" placeholder="Введите вес">
+				</p> <!--/.elemets-group__item .element-item -->
+			</fieldset><!--/.elemets-group -->
+			<!--/User data -->
+
+			<!-- User life style -->
+			<fieldset class="form-calculator__elemets-group elemets-group">
+				<legend class="elemets-group__title">Ваш образ жизни</legend>
+				<p class="elemets-group__item radio">
+					<input type="radio" name="life-style" value=1.2 id="life-style-1" class="radio__input" checked>
+					<label for="life-style-1" class="radio__label">
+						Малоподвижный образ жизни (сидячая работа в офисе)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Style 1. -->
+				<!-- Style 2. -->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="life-style" value=1.375 id="life-style-2" class="radio__input">
+					<label for="life-style-2" class="radio__label">
+						Умеренная активность (1-3 тренировки в неделю)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Style 2. -->
+				<!-- Style 3. -->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="life-style" value=1.55 id="life-style-3" class="radio__input">
+					<label for="life-style-3" class="radio__label">
+						Cредняя активность (занятия 3-5 раз в неделю)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Style 3. -->
+				<!-- Style 4. -->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="life-style" value=1.725 id="life-style-4" class="radio__input">
+					<label for="life-style-4" class="radio__label">
+						Активный образ жизни (интенсивные нагрузки, занятия спортом 6-7 раз в неделю)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Style 4. -->
+				<!-- Style 4. -->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="life-style" value=1.9 id="life-style-5" class="radio__input">
+					<label for="life-style-5" class="radio__label">
+						Спортсмен (занятия 6-7 раз в неделю)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Style 4. -->
+			</fieldset><!--/.elemets-group -->
+		    <!--/ User life style -->
+
+
+			<!-- User goal -->
+			<fieldset class="form-calculator__elemets-group elemets-group">
+				<legend class="elemets-group__title">Ваша цель</legend>
+				<!-- Goal 1. Save weight-->
+				<p class="elemets-group__item radio">
+					<input type="radio" name="goal" value="normal" id="goal-1" class="radio__input" checked>
+					<label for="goal-1" class="radio__label">
+						Поддерживать текущий вес
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Goal 1. Save weight-->
+				<!-- Goal 2. Lose the weight-->
+				<p class="elemets-group__item radio">
+					<input type="radio"  name="goal" value="down" id="goal-2" class="radio__input">
+					<label for="goal-2" class="radio__label">
+						Сбросить вес (похудеть)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Goal 2. Lose the weight-->
+				<!-- Goal 3. Gain weight-->
+				<p class="elemets-group__item radio">
+					<input type="radio"  name="goal" value="up" id="goal-3" class="radio__input">
+					<label for="goal-3" class="radio__label">
+						Набрать вес (набрать мышечную массу)
+					</label>
+				</p> <!--/.elemets-group__item .element-item -->
+				<!-- /Goal 3. Gain weight-->
+			</fieldset><!--/.elemets-group -->
+			<!-- /User goal -->
+
+			
+			<input type="button" id="result-btn" class="btn form-calculator__submit" value="Рассчитать">
+
+			<!-- Result area -->
+			<p id="result" class="box__result-area result-area"></p>
+		
+		</form><!--/calculator -->
+
+      	
+		
+		
+	</div>
+
+	
+
+<script src="js/my_validate.js"></script>
+<script src="js/script.js"></script>	
+</body>
+</html>

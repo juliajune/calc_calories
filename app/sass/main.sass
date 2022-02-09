@@ -1,0 +1,49 @@
+//Mixins
+=hover-effect($property:all, $delay:0.3s)
+	transition: $property $delay
+
+@import _reset
+@import _vars
+@import _fonts
+/* Blocks */
+@import blocks/_form-calculator 
+@import blocks/_elements-group
+@import blocks/_inptxt
+@import blocks/_radio
+@import blocks/_btn
+@import blocks/_result-area
+
+
+*
+	box-sizing: border-box
+	outline: none
+
+body
+	background-color: $color-secondary
+	color: $text-color
+	font-family: $text-font-main
+	font-size: $text-size-main
+	line-height: $text-line-height-main
+	font-weight: $text-weight-normal
+	
+
+a, a:hover, a:visited, a:active, a:link
+	outline: none
+
+
+.box
+	width: 500px
+	background-color: $color-secondary
+	padding-top: 30px
+	border: 1px solid $color-main-light
+	margin: 50px auto
+
+	&__header
+		text-align: center
+		margin-bottom: 20px
+		font-size: $header-size-big
+		font-weight: $text-weight-medium
+
+	&__form-calculator
+		margin-bottom: 30px
+
